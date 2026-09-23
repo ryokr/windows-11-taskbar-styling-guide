@@ -34,6 +34,7 @@ controlStyles:
   - target: ScrollViewer > ScrollContentPresenter > Border > Grid
     styles:
       - Background:=<AcrylicBrush TintColor="{ThemeResource SystemListLowColor}" TintOpacity="0.1" FallbackColor="{ThemeResource SystemChromeHighColor}" />
+      - ColumnDefinitions:=<ColumnDefinitionCollection><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="4"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/></ColumnDefinitionCollection>
   - target: Taskbar.TaskbarFrame > Grid#RootGrid@DockingStates
     styles:
       - Tag=horizontal
@@ -45,8 +46,7 @@ controlStyles:
       - HorizontalAlignment=Right
       - Width={{taskbarDock==`vertical`?skip():`Auto`}}
       - Height={{taskbarDock==`vertical`?skip():56}}
-      - Grid.Column=0
-      - Margin=0,0,2,0
+      - Grid.Column=1
   - target: Taskbar.TaskbarFrame > Grid
     styles:
       - Height=48
@@ -97,8 +97,7 @@ controlStyles:
     styles:
       - HorizontalAlignment=Left
       - VerticalAlignment=Center
-      - Grid.Column=1
-      - Margin=2,0,0,0
+      - Grid.Column=3
   - target: StackPanel#SystemTrayFrameGrid, Grid#SystemTrayFrameGrid
     styles:
       - Background:=<SolidColorBrush Color="{ThemeResource SystemChromeAltHighColor}" Opacity="0.6" />
@@ -138,9 +137,6 @@ controlStyles:
       - FontSize=15
       - FontWeight=SemiBold
       - //HorizontalAlignment=Left
-  - target: Windows.UI.Xaml.Controls.ScrollViewer > Windows.UI.Xaml.Controls.ScrollContentPresenter > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Controls.Grid
-    styles:
-      - ColumnDefinitions:=<ColumnDefinitionCollection><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></ColumnDefinitionCollection>
   - target: Taskbar.AugmentedEntryPointButton > Taskbar.TaskListButtonPanel
     styles:
       - Margin=0
