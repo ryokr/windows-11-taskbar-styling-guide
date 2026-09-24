@@ -159,9 +159,6 @@ controlStyles:
   - target: Microsoft.UI.Xaml.Controls.ItemsRepeater#TaskbarFrameRepeater
     styles:
       - Margin=3,0,3,0
-  - target: Taskbar.SearchBoxButton > Taskbar.TaskListButtonPanel, SearchUx.SearchUI.SearchButtonRootGrid#SearchBoxButtonRootPanel
-    styles:
-      - Margin=2,0,6,0
   - target: Taskbar.AugmentedEntryPointButton > Taskbar.TaskListButtonPanel
     styles:
       - Margin=-4,0,0,0
@@ -176,6 +173,9 @@ controlStyles:
     styles:
       - MaxHeight=27
       - MaxWidth=27
+  - target: SearchUx.SearchUI.SearchButtonRootGrid#SearchBoxButtonRootPanel
+    styles:
+      - Margin=4,0,8,0
   - target: TextBlock#SearchBoxTextBlock
     styles:
       - Text=✦ Meow
@@ -206,5 +206,3 @@ controlStyles:
       - FontWeight=SemiBold
 ```
 </details>
-
-
